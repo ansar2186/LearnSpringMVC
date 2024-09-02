@@ -10,7 +10,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 <meta charset="UTF-8">
-<title>Login</title>
+<title>View Emp</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,19 +24,50 @@
 			<div class="navbar navbar-light bg-light">
 				<a class="nav-item nav-link href="home">Home <span
 					class="sr-only">(current)</span></a> <a class="nav-item nav-link"
-					href="empForm">Add Employee</a> <a class="nav-item nav-link" href="empView">View
-					Employee</a> <a class="nav-item nav-link disabled" href="#">logout</a>
+					href="empForm">Add Employee</a> <a class="nav-item nav-link"
+					href="empView">View Employee</a> <a
+					class="nav-item nav-link disabled" href="#">logout</a>
 			</div>
 		</div>
 	</nav>
 
-	<h2 align="center">${message}</h2>
-	<br>
 	<h3 align="center">
-		<font color="blue">Welcome to Home Page - ${name}</font>
+		<font color="blue">Views Employees Records</font>
 	</h3>
 
-	
+
+	<table class="table table-striped m-5">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">First</th>
+				<th scope="col">Last</th>
+				<th scope="col">Handle</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Jacob</td>
+				<td>Thornton</td>
+				<td>@fat</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Larry</td>
+				<td>the Bird</td>
+				<td>@twitter</td>
+			</tr>
+		</tbody>
+	</table>
+
+
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
