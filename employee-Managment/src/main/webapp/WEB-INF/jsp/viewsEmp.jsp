@@ -34,38 +34,48 @@
 	<h3 align="center">
 		<font color="blue">Views Employees Records</font>
 	</h3>
+	<div class="container-fluid mt-3">
 
 
-	<table class="table table-striped m-5">
+	<table class="table table-bordered m-5">
 		<thead>
 			<tr>
-				<th scope="col">#</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
+				<th scope="col">ID</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Email</th>
+				<th scope="col">Address</th>
+				<th scope="col">Address2</th>
+				<th scope="col">City</th>
+				<th scope="col">State</th>
+				<th scope="col">Zip</th>
+				<th scope="col">Gender</th>
+				<th scope="col">Action</th>
+
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td>Larry</td>
-				<td>the Bird</td>
-				<td>@twitter</td>
-			</tr>
+			<c:forEach var="emp" items="${list}">
+				<tr>
+					<td>${emp.id}</td>
+					<td>${emp.firstName}</td>
+					<td>${emp.lastName}</td>
+					<td>${emp.email}</td>
+					<td>${emp.address}</td>
+					<td>${emp.address2}</td>
+					<td>${emp.city}</td>
+					<td>${emp.state}</td>
+					<td>${emp.pinCode}</td>
+					<td>${emp.gender}</td>
+
+					<td><a href="editemp/${emp.id}">Edit</a>&nbsp;&nbsp;
+					<a href="deleteemp/${emp.id}">Delete</a></td>
+				</tr>
+
+			</c:forEach>
 		</tbody>
 	</table>
+	</div>
 
 
 

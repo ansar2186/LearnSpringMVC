@@ -30,112 +30,130 @@
 			</div>
 		</div>
 	</nav>
+	<h3>
+		<div class="text-center mt-5">
+			<font class="text-primary">Add Employee Form</font>
+		</div>
+	</h3>
 
-
-	<div class="container m-3">
-		<form>
-			<div class="form-row">
-				<div class="form-group col-md-6">
-					<label for="inputEmail4">First Name</label> <input type="text"
-						class="form-control" id="inputEmail4" placeholder="Email">
+	<h3 align="center">
+		<font color="blue">${msg}</font>
+	</h3>
+	<div class="container mt-3">
+		<div class="card m-3 p-5 card-header bg-info text-white">
+			<form action="addEmployee" method="post">
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">First Name</label> <input type="text"
+							class="form-control" id="firstName" name="firstName"
+							placeholder="Email">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Last Name</label> <input type="text"
+							name="lastName" class="form-control" id="lastName"
+							placeholder="Password">
+					</div>
 				</div>
-				<div class="form-group col-md-6">
-					<label for="inputPassword4">Last Name</label> <input
-						type="password" class="form-control" id="inputPassword4"
-						placeholder="Password">
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Email</label> <input type="email"
+							name="email" class="form-control" id="email" placeholder="Email">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Password</label> <input
+							type="password" name="password" class="form-control"
+							id="password" placeholder="Password">
+					</div>
 				</div>
-			</div>
-			<div class="form-row">
-				<div class="form-group col-md-6">
-					<label for="inputEmail4">Email</label> <input type="email"
-						class="form-control" id="inputEmail4" placeholder="Email">
+				<div class="form-group">
+					<label for="inputAddress">Address</label> <input type="text"
+						class="form-control" id="address" name="address"
+						placeholder="1234 Main St">
 				</div>
-				<div class="form-group col-md-6">
-					<label for="inputPassword4">Password</label> <input type="password"
-						class="form-control" id="inputPassword4" placeholder="Password">
+				<div class="form-group">
+					<label for="inputAddress2">Address 2</label> <input type="text"
+						class="form-control" id="address2" name="address2"
+						placeholder="Apartment, studio, or floor">
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="inputAddress">Address</label> <input type="text"
-					class="form-control" id="inputAddress" placeholder="1234 Main St">
-			</div>
-			<div class="form-group">
-				<label for="inputAddress2">Address 2</label> <input type="text"
-					class="form-control" id="inputAddress2"
-					placeholder="Apartment, studio, or floor">
-			</div>
-			<div class="form-row">
-				<div class="form-group col-md-6">
-					<label for="inputCity">City</label> <input type="text"
-						class="form-control" id="inputCity">
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputCity">City</label> <input type="text" name="city"
+							class="form-control" id="city">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="inputState">State</label> <select id="state"
+							name="state" class="form-control">
+							<option selected>...Choose...</option>
+							<option>UP</option>
+							<option>Delhi</option>
+							<option>Punjab</option>
+							<option>Uttarakhand</option>
+							<option>Rajastahn</option>
+							<option>Kashmir</option>
+							<option>MP</option>
+						</select>
+					</div>
+					<div class="form-group col-md-2">
+						<label for="inputZip">Zip</label> <input type="text"
+							name="pinCode" class="form-control" id="pinCode">
+					</div>
 				</div>
-				<div class="form-group col-md-4">
-					<label for="inputState">State</label> <select id="inputState"
-						class="form-control">
-						<option selected>Choose...</option>
-						<option>...</option>
-					</select>
-				</div>
-				<div class="form-group col-md-2">
-					<label for="inputZip">Zip</label> <input type="text"
-						class="form-control" id="inputZip">
-				</div>
-			</div>
-			<fieldset class="form-group">
-				<div class="row">
-					<legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+				<fieldset class="form-group">
+					<div class="row">
+						<legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+						<div class="col-sm-10">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="gender"
+									id="gender" value="Male" checked> <label
+									class="form-check-label" for="gridRadios1"> Male </label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="gender"
+									id="gender" value="Female"> <label
+									class="form-check-label" for="gridRadios2"> Female </label>
+							</div>
+							<div class="form-check disabled">
+								<input class="form-check-input" type="radio" name="gender"
+									id="gender" value="Other"> <label
+									class="form-check-label" for="gridRadios3"> Other </label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<!-- <div class="form-group row">
+					<div class="col-sm-2">Checkbox</div>
 					<div class="col-sm-10">
 						<div class="form-check">
-							<input class="form-check-input" type="radio" name="gridRadios"
-								id="gridRadios1" value="option1" checked> <label
-								class="form-check-label" for="gridRadios1"> First radio
-							</label>
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1"> Example
+								checkbox </label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="radio" name="gridRadios"
-								id="gridRadios2" value="option2"> <label
-								class="form-check-label" for="gridRadios2"> Second radio
-							</label>
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1"> Example
+								checkbox </label>
 						</div>
-						<div class="form-check disabled">
-							<input class="form-check-input" type="radio" name="gridRadios"
-								id="gridRadios3" value="option3" disabled> <label
-								class="form-check-label" for="gridRadios3"> Third
-								disabled radio </label>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1"> Example
+								checkbox </label>
 						</div>
 					</div>
-				</div>
-			</fieldset>
-			<div class="form-group row">
-				<div class="col-sm-2">Checkbox</div>
-				<div class="col-sm-10">
+				</div> -->
+				<!-- <div class="form-group">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="gridCheck1">
-						<label class="form-check-label" for="gridCheck1"> Example
-							checkbox </label>
+						<input class="form-check-input" type="checkbox" id="gridCheck">
+						<label class="form-check-label" for="gridCheck"> Check me
+							out </label>
 					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="gridCheck1">
-						<label class="form-check-label" for="gridCheck1"> Example
-							checkbox </label>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="gridCheck1">
-						<label class="form-check-label" for="gridCheck1"> Example
-							checkbox </label>
-					</div>
+				</div> -->
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="reset" class="btn btn-primary">Reset</button>
 				</div>
-			</div>
-			<div class="form-group">
-				<div class="form-check">
-					<input class="form-check-input" type="checkbox" id="gridCheck">
-					<label class="form-check-label" for="gridCheck"> Check me
-						out </label>
-				</div>
-			</div>
-			<button type="submit" class="btn btn-primary">Sign in</button>
-		</form>
+			</form>
 
+		</div>
 	</div>
 
 
