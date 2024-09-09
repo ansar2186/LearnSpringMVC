@@ -9,6 +9,7 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
+
 <meta charset="UTF-8">
 <title>View Emp</title>
 </head>
@@ -26,55 +27,65 @@
 					class="sr-only">(current)</span></a> <a class="nav-item nav-link"
 					href="empForm">Add Employee</a> <a class="nav-item nav-link"
 					href="empView">View Employee</a> <a
-					class="nav-item nav-link disabled" href="#">logout</a>
+					class="nav-item nav-link disabled" href="logout">logout</a>
 			</div>
 		</div>
 	</nav>
+	<br>
 
 	<h3 align="center">
 		<font color="blue">Views Employees Records</font>
 	</h3>
+	<h3 align="center">
+		<font color="red">${msg}</font>
+	</h3>
+	<!-- 
+	<div class="m-8" align="right">
+		<a class="btn btn-primary btn-sm" href="downloadExcelFile"
+			role="button">Download</a>
+	</div> -->
+
 	<div class="container-fluid mt-3">
-
-
-	<table class="table table-bordered m-5">
-		<thead>
-			<tr>
-				<th scope="col">ID</th>
-				<th scope="col">First Name</th>
-				<th scope="col">Last Name</th>
-				<th scope="col">Email</th>
-				<th scope="col">Address</th>
-				<th scope="col">Address2</th>
-				<th scope="col">City</th>
-				<th scope="col">State</th>
-				<th scope="col">Zip</th>
-				<th scope="col">Gender</th>
-				<th scope="col">Action</th>
-
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="emp" items="${list}">
+		<table class="table table-bordered">
+			<thead>
 				<tr>
-					<td>${emp.id}</td>
-					<td>${emp.firstName}</td>
-					<td>${emp.lastName}</td>
-					<td>${emp.email}</td>
-					<td>${emp.address}</td>
-					<td>${emp.address2}</td>
-					<td>${emp.city}</td>
-					<td>${emp.state}</td>
-					<td>${emp.pinCode}</td>
-					<td>${emp.gender}</td>
+					<th scope="col">ID</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Address</th>
+					<th scope="col">Address2</th>
+					<th scope="col">City</th>
+					<th scope="col">State</th>
+					<th scope="col">Zip</th>
+					<th scope="col">Gender</th>
+					<th scope="col">Action</th>
 
-					<td><a href="editemp/${emp.id}">Edit</a>&nbsp;&nbsp;
-					<a href="deleteemp/${emp.id}">Delete</a></td>
 				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="emp" items="${list}">
+					<tr>
+						<td>${emp.id}</td>
+						<td>${emp.firstName}</td>
+						<td>${emp.lastName}</td>
+						<td>${emp.email}</td>
+						<td>${emp.address}</td>
+						<td>${emp.address2}</td>
+						<td>${emp.city}</td>
+						<td>${emp.state}</td>
+						<td>${emp.pinCode}</td>
+						<td>${emp.gender}</td>
 
-			</c:forEach>
-		</tbody>
-	</table>
+						<td><a class="btn btn-primary btn-sm"
+							href="editemp/${emp.id}" role="button">Edit</a>&nbsp;&nbsp; <a
+							class="btn btn-danger btn-sm" href="deleteEmp/${emp.id}"
+							role="button">Delete</a></td>
+					</tr>
+
+				</c:forEach>
+			</tbody>
+		</table>
 	</div>
 
 
